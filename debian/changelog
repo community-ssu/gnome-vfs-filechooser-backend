@@ -1,3 +1,10 @@
+gnome-vfs-filechooser-backend (1.10.2-1+0m5-0cssu1) unstable; urgency=low
+
+  * Do not try to get VFAT flie attributes if file is not regular file
+    or symbolic link
+
+ -- Ivaylo Dimitrov <freemangordon@abv.bg>  Sun, 04 Sep 2011 12:31:22 +0300
+
 gnome-vfs-filechooser-backend (1.10.2-1+0m5) unstable; urgency=low
 
   * This entry has been added by BIFH queue processor

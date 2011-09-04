@@ -3112,17 +3112,21 @@ info_from_vfs_info (GtkFileSystemGnomeVFS  *system_vfs,
           /* If the file is on VFAT and if the hidden attribute is set, we
            * consider the file to be hidden, Bug #147027 */
 	  char *local_file = gnome_vfs_get_local_path_from_uri (uri);
+	  struct stat stat_buf;
 	  if (local_file != NULL)
             {
-              int fd = open (local_file, O_RDONLY);
-              if (fd != -1)
+              if((lstat(local_file,&stat_buf) == 0) && (S_ISREG(stat_buf.st_mode) || S_ISLNK(stat_buf.st_mode)))
                 {
-                  __u32 attrs;
-                  if (ioctl(fd, FAT_IOCTL_GET_ATTRIBUTES, &attrs) == 0)
-                    is_hidden = attrs & ATTR_HIDDEN ? TRUE : FALSE;
-                  close (fd);
+                  int fd = open (local_file, O_RDONLY);
+                  if (fd != -1)
+                    {
+                      __u32 attrs;
+                      if (ioctl(fd, FAT_IOCTL_GET_ATTRIBUTES, &attrs) == 0)
+                        is_hidden = attrs & ATTR_HIDDEN ? TRUE : FALSE;
+                      close (fd);
+                    }
                 }
-	      g_free (local_file);
+              g_free (local_file);
             }
         }
 

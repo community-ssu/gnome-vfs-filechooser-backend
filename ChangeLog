@@ -1,0 +1,101 @@
+2009-11-23  Alban Crequy  <alban.crequy@collabora.co.uk>
+ 
+ 	* src/gtkfilesystemgnomevfs.c: check VFAT hidden attribute, NB#147027
+
+2009-07-08  Richard Hult  <richard@imendio.com>
+
+	* Release 1.10.1.
+
+2009-07-08  Richard Hult  <richard@imendio.com>
+
+	* configure.ac: Bump version.
+
+	* src/gtkfilesystemgnomevfs.c (get_folder_file_info_callback):
+	Free the URI. Patch from Alexey Shilov, part of NB#118293.
+
+2009-06-05  Michael Natterer  <mitch@lendso.com>
+
+	* configure.ac: require hildon-fm-2, bump GTK+ requirement to
+	2.14.3.
+
+	* src/gtkfilesystemgnomevfs.h: include gtkfilesystem.h from its
+	new place in hildon-fm.
+
+	* debian/control
+	* debian/changelog: debian stuff.
+
+2009-03-10  Richard Hult  <richard@imendio.com>
+
+	* Release 1.10.0
+
+	* src/gnome-icon-lookup.c: Apply patch from Mox Soini to update
+	icon names, NB#104961.
+
+	* configure.ac: Bump version.
+
+2008-10-22  Richard Hult  <richard@imendio.com>
+
+	* src/gtkfilesystemgnomevfs.c (is_desktop_file): Apply similar
+	workaround as Debian for GNOME bug #512555.
+
+2008-04-16  Richard Hult  <richard@imendio.com>
+
+	* Release 1.9.5.
+
+2008-04-16  Richard Hult  <richard@imendio.com>
+
+	* configure.ac: Bump version.
+
+	* src/gtkfilesystemgnomevfs.c:
+	(gtk_file_system_gnome_vfs_finalize): Don't modify the hash table
+	while iterating it.
+	(gtk_file_folder_gnome_vfs_dispose): Check if we have a folders
+	hashtable before accessing it. Chain up.
+
+2007-10-31  Martyn Russell  <martyn@imendio.com>
+
+	* Release 1.9.4.
+
+2007-10-31  Martyn Russell  <martyn@imendio.com>
+
+	* configure.ac: Bumped version.
+
+	* debian/changelog:
+	* src/gtkfilesystemgnomevfs.c: (get_options): Use fast mime types
+	guessing, fixes NB#70034.
+
+2007-08-10  Richard Hult  <richard@imendio.com>
+
+	* Release 1.9.3.
+
+2007-08-07  Richard Hult  <richard@imendio.com>
+
+	* src/gtkfilesystemgnomevfs.c
+	(gtk_file_system_gnome_vfs_create_folder): Don't silently abort
+	the xfer job on errors.
+
+2007-08-07  Richard Hult  <richard@imendio.com>
+
+	* configure.ac: Bump version.
+
+	* src/gtkfilesystemgnomevfs.c (set_vfs_error): Map
+	GNOME_VFS_ERROR_FILE_EXISTS to GTK_FILE_SYSTEM_ERROR_ALREADY_EXISTS.
+
+2007-05-18  Richard Hult  <richard@imendio.com>
+
+	* Release 1.9.2.
+
+2007-05-18  Richard Hult  <richard@imendio.com>
+
+	* src/gtkfilesystemgnomevfs.c:
+	(gtk_file_system_gnome_vfs_list_volumes),
+	(gtk_file_system_gnome_vfs_volume_get_is_mounted):
+	- Work around detection of unmounted volumes, see GNOME bug
+	#439422.
+	- Fix memory bug, see GNOME bug #439420.
+
+2007-05-18  Richard Hult  <richard@imendio.com>
+
+	* configure.ac: Bump version
+
+

@@ -1,0 +1,87 @@
+gnome-vfs-filechooser-backend (1.10.2-1+0m5) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    Suffix +0m5 added to package revision
+
+ -- Kojo Aapo <aapo.kojo@nokia.com>  Thu, 26 Nov 2009 14:58:04 +0200
+
+gnome-vfs-filechooser-backend (1.10.2-1) unstable; urgency=low
+
+  * Patch from Alban Crequy, check VFAT hidden attribute, NB#147027
+
+ -- Alban Crequy <alban.crequy@collabora.co.uk>  Wed, 25 Nov 2009 14:56:00 +0200
+
+gnome-vfs-filechooser-backend (1.10.1-1) unstable; urgency=low
+
+  * Fix leak, patch from Alexey Shilov, part of NB#118293
+
+ -- Richard Hult <richard@imendio.com>  Wed,  8 Jul 2009 11:37:00 +0200
+
+gnome-vfs-filechooser-backend (1.10.0-2) unstable; urgency=low
+
+  [ Michael Natterer ]
+  * Depend on hildon-fm and GTK+ 2.14.3 and fix up the gtkfilesystem.h
+    includes.
+
+  [ Claudio Saavedra ]
+  * Add the build dependency on libhildonfm-2.
+
+ -- Claudio Saavedra <csaavedra@igalia.com>  Fri, 05 Jun 2009 17:35:39 +0300
+
+gnome-vfs-filechooser-backend (1.10.0-1) unstable; urgency=low
+
+  * Fixes: NB#104961, update gnomevfs icon names
+
+ -- Richard Hult <richard@imendio.com>  Fri, 13 Mar 2009 10:51:00 +0100
+
+gnome-vfs-filechooser-backend (1.9.6-2) unstable; urgency=low
+
+  * No change in this version, just bump the version to get rebuilt
+  * Fixes: NB#94728, several gnome-vfs packages shall be recompiled to
+
+ -- Richard Hult <richard@imendio.com>  Tue,  9 Dec 2008 14:07:00 +0100
+
+gnome-vfs-filechooser-backend (1.9.6-1) unstable; urgency=low
+
+  * Fixes: NB#88054, File Manager crashes when user tries to browse through
+
+ -- Richard Hult <richard@imendio.com>  Wed, 22 Oct 2008 08:48:07 +0200
+
+gnome-vfs-filechooser-backend (1.9.5-1) unstable; urgency=low
+
+  * Fixes: NB#84064, Bugs in the gtkfilechooser backend
+
+ -- Richard Hult <richard@imendio.com>  Wed, 16 Apr 2008 08:44:17 +0200
+
+gnome-vfs-filechooser-backend (1.9.4-1) unstable; urgency=low
+
+  * Fixes: NB#70034, Recognized files are not opened if extensions are...
+
+ -- Martyn Russell <martyn@imendio.com>  Wed, 31 Oct 2007 14:00:00 +0000
+
+gnome-vfs-filechooser-backend (1.9.3-1) unstable; urgency=low
+
+  * Fixes: NB#63125, Logical name sfil_ni_opearation_failed is displayed
+  * Fixes: NB#63038, No debug symbol package built for gnome-vfs-filechooser
+  * Fixes: NB#63676, Not able to create new folder in device memory full
+
+ -- Richard Hult <richard@imendio.com>  Fri, 10 Aug 2007 17:40:51 +0200
+
+gnome-vfs-filechooser-backend (1.9.2-1) unstable; urgency=low
+
+  * Work around detection of unmounted volumes, see GNOME bug #439422
+  * Fix memory bug, see GNOME bug #439420
+
+ -- Richard Hult <richard@imendio.com>  Fri,  2 Mar 2007 08:48:15 +0100
+
+gnome-vfs-filechooser-backend (1.9.1-2) unstable; urgency=low
+
+  * Add cdbs build dependency
+
+ -- Richard Hult <richard@imendio.com>  Fri,  2 Mar 2007 08:48:15 +0100
+
+gnome-vfs-filechooser-backend (1.9.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Richard Hult <richard@imendio.com>  Wed, 14 Feb 2007 08:48:15 +0100

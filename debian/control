@@ -8,7 +8,7 @@ Standards-Version: 3.6.1.0
 Package: gnome-vfs-filechooser-backend
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, kernel-feature-errata-430973-workaround[armel]
 Description: GnomeVFS filechooser backend for GTK+
  This package contains the GnomeVFS filechooser backend for use in the
  filechooser in GTK+.
